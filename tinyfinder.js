@@ -2,7 +2,7 @@
 	@author: Scott Robbin
 	@url: http://srobbin.com
 	@title: TinyFinder
-	@description: Located rev=canonical links within a page, so that people can use the preferred tiny url. If it doesn't exists, uses tr.im to create one.
+	@description: Locate rev=canonical links within a page, so that people can use the preferred tiny url. If it doesn't exists, uses tr.im to create one.
 	@license: MPL
 */
 
