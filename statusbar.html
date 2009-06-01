@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Tiny Finder - A Statusbar Feature for Mozilla Labs' Jetpack</title>
+  <style>
+    body {
+      font-size: 11.5px;
+      font-family: Helvetica, sans-serif;
+      color: #DDD;
+    }
+    
+    #container {
+      position: relative;
+      background: url(link.png) top left no-repeat #666;
+      border: 1px solid #333;
+      z-index: 0;
+      }
+
+    #tiny {
+      display: block;
+      text-shadow: 1px 1px 1px #333;
+      padding: 3px 3px 3px 20px;
+      cursor: pointer;
+      z-index: 10;
+      }
+    #tiny:hover { color: #FFF; }
+    
+    #progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 20px;
+      background-color: #333;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <span id="progress">&nbsp;</span>
+		<span id="tiny">Click to make a tiny link</span>
+  </div>
+</body>
+</html>
