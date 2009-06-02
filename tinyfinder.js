@@ -43,11 +43,13 @@ jetpack.statusBar.append({
   PRIVATE, HELPER FUNCTIONS
 *******************************/
 
-/* Try to find the rev=canonical link in the page content */
+/* Try to find the rev=canonical or rel=shorturl link in the page content */
 function _findCanonical() {
   var tiny, link, doc;
   doc = jetpack.tabs.focused.contentDocument;
   if(tiny = $("link[rev='canonical']", doc).attr("href"))
+    link = tiny;
+  else if(tiny = $("link[rel='shorturl']", doc).attr("href"))
     link = tiny;
   else if(_links[jetpack.tabs.focused.url])
     link = _links[jetpack.tabs.focused.url]; // We've already fetched this url once
